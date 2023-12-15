@@ -1,0 +1,42 @@
+.App {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.toggle-button {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  z-index: 2;
+  height: 40px;
+  width: 40px;
+  background: tomato;
+  color: #fff;
+  border: 0;
+  outline: none;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  font-size: 20px;
+  transition: background-color 0.3s, color 0.3s, transform 0.3s;
+}
+
+.toggle-button.open-btn {
+  background-color: #fff;
+  color: #000;
+  transform: rotate(360deg);
+}
+
+.open-btn {
+  background-color: #fff;
+  color: #000;
+}
+
+@media only screen and (max-width: 600px) {
+  .toggle-button {
+    top: 15px;
+  }
+}

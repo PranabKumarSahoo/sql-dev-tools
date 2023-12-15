@@ -1,0 +1,18 @@
+.select-stat-sec {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    background-color: #141421;
+    width: 100%;
+}
+
+.prefix-suffix-stat {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}

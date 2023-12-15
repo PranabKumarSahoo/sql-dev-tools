@@ -1,0 +1,43 @@
+.input-box-comp {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.input-box-title {
+    color: white;
+    font-size: 20px;
+}
+
+.input-with-clear-btn {
+    width: 40%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.input-with-clear-btn button {
+    position: absolute;
+    right: 0px;
+    cursor: pointer;
+    background-color: red;
+    color: white;
+    padding: 10px;
+    font-size: 15px;
+    border-radius: 0 4px 4px 0;
+    border: none;
+    outline: none;
+    
+}
+
+.input-box-comp .input-box {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    font-weight: bold;
+}
