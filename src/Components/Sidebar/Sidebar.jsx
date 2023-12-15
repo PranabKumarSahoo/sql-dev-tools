@@ -27,10 +27,6 @@ export default function Sidebar({ isOpen, closeSidebar }) {
                     </li>
                 </ul>
             </nav>
-            <div className='author'>
-                <img src="./logo.png" alt="TheCodingCo" />
-                <p>Developed by <b>TheCodingCo.</b></p>
-            </div>
         </div>
     )
 }
