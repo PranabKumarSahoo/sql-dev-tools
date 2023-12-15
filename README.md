@@ -14,6 +14,8 @@ In SQL, the `DROP CONSTRAINT` command plays a crucial role in managing the data 
 
 Counting the total number of rows in a table is a common use case. `COUNT(*)` iterates through every row in the specified table and returns the total number of rows found. This information is valuable for data analysis, performance optimization, and understanding overall data volume.
 
+### More features will added if anyone interested to contribute in this project!! 
+
 ## Custom Statement
 
 You can create a repetitive statement with a middle statement and prefix statement and suffix statement. This flexibility allows you to customize your queries efficiently.
