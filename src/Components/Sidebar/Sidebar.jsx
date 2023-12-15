@@ -27,6 +27,9 @@ export default function Sidebar({ isOpen, closeSidebar }) {
                     </li>
                 </ul>
             </nav>
+            <div className='author'>
+                <p>Developed by <b><a href="https://github.com/PranabKumarSahoo">Pranab</a></b></p>
+            </div>
         </div>
     )
 }
