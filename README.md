@@ -1,6 +1,8 @@
 # SQL Dev Tool
 
 ## Overview
+Introducing SQL Dev Tools!
+So basically, this is a tools for SQL Developers, a React-based application empowering SQL developers with versatile functionalities and make their daily tasks easy.
 
 ## DROP CONSTRAINT
 
