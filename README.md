@@ -5,7 +5,9 @@ Introducing **SQL Dev Tools!**
 
 So basically, this is a tools for **SQL Developers**, a React-based application empowering SQL developers with versatile functionalities and make their **day-to-life tasks** easy.
 
-## DROP CONSTRAINT
+So tools that I build:
+
+### DROP CONSTRAINT
 
 In SQL, the `DROP CONSTRAINT` command plays a crucial role in managing the data integrity and structure of your tables. It allows you to remove existing constraints that are no longer needed or that are causing unwanted limitations. Here's a breakdown of its work and why you might use it.
 
@@ -15,15 +17,15 @@ In SQL, the `DROP CONSTRAINT` command plays a crucial role in managing the data 
   - **Data integrity loss:** Dropping certain constraints like PRIMARY KEY can compromise data integrity and lead to duplicate or invalid entries.
   - **Unexpected behavior:** Removing constraints can affect dependent objects and queries that rely on them, leading to unexpected results.
 
-## Counting Total Rows in a Table
+### Counting Total Rows in a Table
 
 Counting the total number of rows in a table is a common use case. `COUNT(*)` iterates through every row in the specified table and returns the total number of rows found. This information is valuable for data analysis, performance optimization, and understanding overall data volume.
 
-## Custom Statement
+### Custom Statement
 
 You can create a repetitive statement with a middle statement and prefix statement and suffix statement. This flexibility allows you to customize your queries efficiently.
 
-### More features will added if anyone interested to contribute in this project!! 
+### As I continuously evolve, future features will expand the capabilities of SQL Dev Tools.
 
 ## Demo
 
