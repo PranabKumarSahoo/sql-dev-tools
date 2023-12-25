@@ -3,9 +3,9 @@
 ## Overview
 Introducing **SQL Dev Tools!**
 
-So basically, this is a tools for **SQL Developers**, a React-based application empowering SQL developers with versatile functionalities and make their **day-to-life tasks** easy.
+This is a tool for **SQL Developers**, a React-based application empowering SQL developers with versatile functionalities and make their **day-to-life tasks** easy.
 
-So tools that I build:
+## Features
 
 ### DROP CONSTRAINT
 
@@ -60,8 +60,12 @@ npm run build
 This will create an optimized build of your project in the dist directory.
 
 ## Contributing
-If you'd like to contribute to this project, please follow the standard GitHub fork/pull request process.
+Your contributions are greatly appreciated. Whether you find and report issues, submit pull requests, or simply provide feedback, you're making a valuable contribution to the community.
 
 ## Contact
 kumarspranab19@gmail.com
 Feel free to reach out with any questions or feedback!
+
+## License
+
+This project is open-source and available under the [MIT License](LICENSE). Feel free contribute.
