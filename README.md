@@ -69,6 +69,7 @@ If you would like to contribute. Follow these simple steps:
 4. **Commit Changes**: Keep it clear and concise.
 5. **Push to Your Fork**: Send changes to your forked repo.
 6. **Pull Request**: Submit a PR, explaining your changes.
+7. Make sure to leave a ⭐ on this repo.
 
 That's it!
 
