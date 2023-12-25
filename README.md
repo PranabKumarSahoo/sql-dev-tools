@@ -60,12 +60,22 @@ npm run build
 This will create an optimized build of your project in the dist directory.
 
 ## Contributing
+
+If you would like to contribute. Follow these simple steps:
+
+1. **Fork the Repository**: Click "Fork" at the top right to create your copy.
+2. **Create a Branch**: Make a new branch for your work.
+3. **Make Changes**: Code your feature or bug fix.
+4. **Commit Changes**: Keep it clear and concise.
+5. **Push to Your Fork**: Send changes to your forked repo.
+6. **Pull Request**: Submit a PR, explaining your changes.
+
+That's it!
+
 Your contributions are greatly appreciated. Whether you find and report issues, submit pull requests, or simply provide feedback, you're making a valuable contribution to the community.
 
 ## Contact
-kumarspranab19@gmail.com
-Feel free to reach out with any questions or feedback!
+Feel free to reach out to kumarspranab19@gmail.com with any questions or feedback!
 
 ## License
-
 This project is open-source and available under the [MIT License](LICENSE). Feel free contribute.
