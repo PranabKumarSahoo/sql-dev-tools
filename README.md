@@ -38,11 +38,11 @@ To run this application locally, follow these steps:
 1. Clone the repository:
 
 ```bash
-git clone https://github.com/PranabKumarSahoo/react-note-app.git
+git clone https://github.com/PranabKumarSahoo/sql-dev-tools.git
 ```
 2. Change into the project directory:
 ```
-cd react-note-app
+cd sql-dev-tools
 ```
 3. Install dependencies:
 ```
