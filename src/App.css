@@ -1,4 +1,4 @@
-.App {
+ .App {
   display: flex;
   justify-content: center;
   align-items: flex-start;
@@ -57,8 +57,7 @@ body::-webkit-scrollbar {
 }
 
 body::-webkit-scrollbar-track {
-  background: var(--sb-track-color);
-   
+  background: var(--sb-track-color); 
 }
 
 body::-webkit-scrollbar-thumb {
