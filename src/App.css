@@ -58,11 +58,11 @@ body::-webkit-scrollbar {
 
 body::-webkit-scrollbar-track {
   background: var(--sb-track-color);
-  border-radius: 10px;
+   
 }
 
 body::-webkit-scrollbar-thumb {
   background: var(--sb-thumb-color);
-  border-radius: 1rem;
+  border-radius: 10px;
   border: 1px solid #25035c;
   }
