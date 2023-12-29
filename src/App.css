@@ -40,3 +40,29 @@
     top: 15px;
   }
 }
+
+
+
+body {
+  --sb-track-color: #232E33;
+  --sb-thumb-color: linear-gradient(to right, #260843, #553d7a);
+  --sb-size: 8px;
+
+  scrollbar-color: var(--sb-thumb-color) 
+                   var(--sb-track-color);
+}
+
+body::-webkit-scrollbar {
+  width: var(--sb-size) 
+}
+
+body::-webkit-scrollbar-track {
+  background: var(--sb-track-color);
+  border-radius: 10px;
+}
+
+body::-webkit-scrollbar-thumb {
+  background: var(--sb-thumb-color);
+  border-radius: 1rem;
+  border: 1px solid #25035c;
+  }
