@@ -80,3 +80,8 @@ Feel free to reach out to kumarspranab19@gmail.com with any questions or feedbac
 
 ## License
 This project is open-source and available under the [MIT License](LICENSE). Feel free contribute.
+
+## Contributors
+<a href="https://github.com/PranabKumarSahoo/sql-dev-tools/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=PranabKumarSahoo/sql-dev-tools" />
+</a>
