@@ -50,7 +50,7 @@ npm install
 ```
 4. To start the development server and run the project, use the following command:
 ```
-npm run dev
+npm start
 ```
 This will start the development server and open your project in the browser. Any changes you make to the source code will be automatically reflected in the browser.
 Building for Production:
