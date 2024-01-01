@@ -21,7 +21,7 @@ export default function HomePage() {
                 <SelectStatement />
             </div>
             <div id="section-4" className='sections'>
-                <h2 className='section-4-title'>Comming Soon...</h2>
+                <h2 className='section-4-title'>Coming Soon...</h2>
             </div>
         </div>
     )
