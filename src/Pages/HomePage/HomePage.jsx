@@ -3,6 +3,7 @@ import './HomePage.css'
 import DropConstraintSec from '../../Sections/DropConstraintSec/DropConstraintSec'
 import CountOfRows from '../../Sections/CountOfRows/CountOfRows'
 import SelectStatement from '../../Sections/SelectStatement/SelectStatement'
+import NthHighest from '../../Sections/NthHighest/NthHighest'
 
 export default function HomePage() {
     return (
@@ -20,8 +21,12 @@ export default function HomePage() {
                 <h2 className='section-3-title'>Custom Statement</h2>
                 <SelectStatement />
             </div>
-            <div id="section-4" className='sections'>
-                <h2 className='section-4-title'>Coming Soon...</h2>
+            <div id="nth-highest" className='sections'>
+                <h2 className='section-4-title'>Nth Highest</h2>
+                <NthHighest />
+            </div>
+            <div id="section-5" className='sections'>
+                <h2 className='section-5-title'>Coming Soon...</h2>
             </div>
         </div>
     )

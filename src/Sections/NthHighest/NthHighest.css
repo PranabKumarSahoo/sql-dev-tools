@@ -1,0 +1,9 @@
+.nth-highest {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    background-color: #141421;
+    width: 100%;
+}
