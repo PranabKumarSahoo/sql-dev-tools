@@ -5,12 +5,13 @@
     align-items: center;
     justify-content: center;
     background-color: #181828;
+    float:left;
 }
 
 .home-page-title {
     padding: 20px;
     color: white;
-    text-shadow: 1px 1px 3px red;
+    text-shadow: 1px 1px 3px blue;
 }
 
 #drop-constraint {
