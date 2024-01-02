@@ -86,7 +86,27 @@
 .section-4-title {
     color: white;
 }
-
+/* Add this style to your HomePage.css or create a new CSS file */
+.scroll-up-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .scroll-up-button:hover {
+    background-color: #0056b3;
+  }
+  
 @media only screen and (max-width: 600px) {
     .home-page-title {
         font-size: 22px;
