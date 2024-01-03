@@ -23,6 +23,9 @@ export default function Sidebar({ isOpen, closeSidebar }) {
                         <a href='#select-statement' className='nav-link' onClick={handleLinkClick}>Custom Statement</a>
                     </li>
                     <li>
+                        <a href='#nth-highest' className='nav-link' onClick={handleLinkClick}>Nth Highest</a>
+                    </li>
+                    <li>
                         <a href='#section-4' className='nav-link' onClick={handleLinkClick}>Coming Soon...</a>
                     </li>
                 </ul>
