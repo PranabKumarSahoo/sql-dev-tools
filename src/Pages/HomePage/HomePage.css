@@ -98,7 +98,7 @@
     background-color: #007bff;
     color: #fff;
     border: none;
-    border-radius: 5px;
+    border-radius: 50%;
     cursor: pointer;
     transition: background-color 0.3s ease;
   }
