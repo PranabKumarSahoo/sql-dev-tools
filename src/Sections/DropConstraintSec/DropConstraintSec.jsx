@@ -28,7 +28,7 @@ export default function DropConstraintSec() {
                     }
 
                     // Add a new line character after each transformed line
-                    result += "\n";
+                    result += ";\n";
                 }
             }
 
@@ -40,7 +40,8 @@ export default function DropConstraintSec() {
     };
     return (
         <div className='drop-const-sec'>
-            <TextBox textbox_placehold="Enter tables name line by line..." value={textBoxValue} onChange={handleTextBoxChange} />
+            <TextBox textbox_placehold="Enter table & constraint name line by line as per syntax mentioned below...
+            {table_name}: {constraint_name}" value={textBoxValue} onChange={handleTextBoxChange} />
 
             <Button btnText='Submit' onClick={handleButtonClick} />
 

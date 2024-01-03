@@ -4,9 +4,11 @@ import DropConstraintSec from "../../Sections/DropConstraintSec/DropConstraintSe
 import CountOfRows from "../../Sections/CountOfRows/CountOfRows";
 import SelectStatement from "../../Sections/SelectStatement/SelectStatement";
 import NthHighest from "../../Sections/NthHighest/NthHighest";
+import { FiChevronsUp} from "react-icons/fi";
 
 export default function HomePage() {
   const [showScrollUpButton, setShowScrollUpButton] = useState(false);
+  const [buttonIcon, setButtonIcon] = useState(<FiChevronsUp />);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -15,6 +17,7 @@ export default function HomePage() {
 
       // Show the scroll-up button when the user scrolls down
       setShowScrollUpButton(scrollY > showButtonThreshold);
+      setButtonIcon(<FiChevronsUp />);
     };
 
     // Add event listener for scroll
@@ -53,7 +56,7 @@ export default function HomePage() {
       </div>
       {showScrollUpButton && (
         <button className='scroll-up-button' onClick={scrollToTop}>
-          Scroll Up
+          {buttonIcon}
         </button>
       )}
     </div>
