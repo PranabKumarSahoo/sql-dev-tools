@@ -3,10 +3,12 @@ a {
     color: white;
     text-align: center;
 }
+
 .sidebar {
     width: 300px;
     height: 100vh;
-    background: #2e2e4c;
+    background: linear-gradient(to bottom, #303154, #2e2e4c);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
     position: fixed;
     top: 0;
     left: -300px;
@@ -31,14 +33,14 @@ nav ul {
     padding: 30px;
 }
 
-
 .nav-link {
     display: block;
     width: 100%;
     padding: 15px;
-    font-size: 17px;
-    transition: 0.3s;
+    font-size: 18px;
+    transition: background-color 0.3s ease;
     background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
 }
 
 .nav-link:hover {
@@ -52,12 +54,15 @@ nav ul {
     gap: 10px;
     padding: 20px;
     margin: 20px;
-    background-color: rgba(0, 0, 0, 0.2);
+    background: linear-gradient(to right, #303154, #2e2e4c);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
 }
 
 .author p {
     color: white;
-    font-size: 15px;
+    font-size: 16px;
+    margin: 0;
 }
 
 @media only screen and (max-width: 600px) {
