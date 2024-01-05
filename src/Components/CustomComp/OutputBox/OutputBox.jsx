@@ -17,7 +17,7 @@ export default function OutputBox({ data }) {
     const handleCopyClick = () => {
         // Select the text inside the textarea
         textareaRef.current.select();
-        toast.success("Copied", { position: toast.POSITION.TOP_CENTER,autoClose:1000 });
+        toast.success("Copied", { position: toast.POSITION.TOP_RIGHT,autoClose:1000 });
 
         // Change the style and text of the copy button
         setCopyBtnCss({

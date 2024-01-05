@@ -28,7 +28,7 @@ export default function SelectStatement() {
 
     const notification=(val)=>{
         if(val){
-            toast.success("Submitted successfully!",{position:toast.POSITION.TOP_CENTER,autoClose:1000});
+            toast.success("Submitted successfully!",{position:toast.POSITION.TOP_RIGHT,autoClose:1000});
         }
         else{
             toast.warning("Please Enter The Tables Name or Middle Statement",{position:toast.POSITION.TOP_CENTER,autoClose:1000});

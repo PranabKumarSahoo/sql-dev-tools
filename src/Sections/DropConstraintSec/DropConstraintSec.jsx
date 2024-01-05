@@ -17,10 +17,10 @@ export default function DropConstraintSec() {
 
     const notification=(val)=>{
         if(val>0){
-            toast.success("Submitted successfully!",{position:toast.POSITION.TOP_CENTER,autoClose:1000});
+            toast.success("Submitted successfully!",{position:toast.POSITION.TOP_RIGHT,autoClose:1000});
         }
         else{
-            toast.warning("Please enter key constraint",{position:toast.POSITION.TOP_CENTER,autoClose:1000});
+            toast.warning("Please enter key constraint",{position:toast.POSITION.TOP_RIGHT,autoClose:1000});
         }
     }
 

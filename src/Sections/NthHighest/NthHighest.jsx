@@ -26,7 +26,7 @@ export default function NthHighest() {
   };
   const notification=(val)=>{
     if(val){
-        toast.success("Submitted successfully!",{position:toast.POSITION.TOP_CENTER,autoClose:1000});
+        toast.success("Submitted successfully!",{position:toast.POSITION.TOP_RIGHT,autoClose:1000});
     }
     else{
         toast.warning("Please enter values for all input",{position:toast.POSITION.TOP_CENTER,autoClose:1000});

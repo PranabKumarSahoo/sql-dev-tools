@@ -28,10 +28,10 @@ export default function CountOfRows() {
 
     const notification=(val)=>{
         if(val!==''){
-            toast.success("Submitted successfully!",{position:toast.POSITION.TOP_CENTER,autoClose:1000});
+            toast.success("Submitted successfully!",{position:toast.POSITION.TOP_RIGHT,autoClose:1000});
         }
         else{
-            toast.warning("Please enter the schema name",{position:toast.POSITION.TOP_CENTER,autoClose:1000});
+            toast.warning("Please enter the schema name",{position:toast.POSITION.TOP_RIGHT,autoClose:1000});
         }
     }
 
