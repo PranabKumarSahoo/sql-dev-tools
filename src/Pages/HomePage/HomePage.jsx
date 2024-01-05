@@ -4,11 +4,10 @@ import DropConstraintSec from "../../Sections/DropConstraintSec/DropConstraintSe
 import CountOfRows from "../../Sections/CountOfRows/CountOfRows";
 import SelectStatement from "../../Sections/SelectStatement/SelectStatement";
 import NthHighest from "../../Sections/NthHighest/NthHighest";
-import { FiChevronsUp} from "react-icons/fi";
+import NthMinimum from "../../Sections/NthMinimum/NthMinimum";
 
 export default function HomePage() {
   const [showScrollUpButton, setShowScrollUpButton] = useState(false);
-  const [buttonIcon, setButtonIcon] = useState(<FiChevronsUp />);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -17,7 +16,6 @@ export default function HomePage() {
 
       // Show the scroll-up button when the user scrolls down
       setShowScrollUpButton(scrollY > showButtonThreshold);
-      setButtonIcon(<FiChevronsUp />);
     };
 
     // Add event listener for scroll
@@ -51,12 +49,16 @@ export default function HomePage() {
         <h2 className="section-4-title">Nth Highest</h2>
         <NthHighest />
       </div>
-      <div id="section-5" className="sections">
-        <h2 className="section-5-title">Coming Soon...</h2>
+      <div id="nth-minimum" className="sections">
+        <h2 className="section-5-title">Nth Minimum</h2>
+        <NthMinimum />
+      </div>
+      <div id="section-6" className="sections">
+        <h2 className="section-6-title">Coming Soon...</h2>
       </div>
       {showScrollUpButton && (
         <button className='scroll-up-button' onClick={scrollToTop}>
-          {buttonIcon}
+          Scroll Up
         </button>
       )}
     </div>

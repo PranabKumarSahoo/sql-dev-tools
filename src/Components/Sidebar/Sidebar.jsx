@@ -26,7 +26,7 @@ export default function Sidebar({ isOpen, closeSidebar }) {
                         <a href='#nth-highest' className='nav-link' onClick={handleLinkClick}>Nth Highest</a>
                     </li>
                     <li>
-                        <a href='#section-4' className='nav-link' onClick={handleLinkClick}>Coming Soon...</a>
+                        <a href='#nth-minimum' className='nav-link' onClick={handleLinkClick}>Nth Minimum</a>
                     </li>
                 </ul>
             </nav>
