@@ -4,6 +4,9 @@ import TextBox from '../../Components/CustomComp/TextBox/TextBox'
 import InputBox from '../../Components/CustomComp/InputBox/InputBox';
 import Button from '../../Components/CustomComp/Button/Button';
 import OutputBox from '../../Components/CustomComp/OutputBox/OutputBox';
+import {ToastContainer,toast} from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 
 export default function SelectStatement() {
     const [wordsInput, setWordsInput] = useState('');
@@ -23,10 +26,19 @@ export default function SelectStatement() {
         }
     }
 
+    const notification=(val)=>{
+        if(val){
+            toast.success("Submitted successfully!",{position:toast.POSITION.TOP_RIGHT,autoClose:1000});
+        }
+        else{
+            toast.warning("Please Enter The Tables Name or Middle Statement",{position:toast.POSITION.TOP_CENTER,autoClose:1000});
+        }
+    }
     const generateSelectStat = () => {
         const wordsArray = wordsInput.split('\n').filter(word => word !== '');
 
         if (wordsArray.length > 0 && wordsArray[0].trim() !== '') {
+            notification(true);
             const outputStates = wordsArray.map(word => {
                 const trimmedWord = word.trim();
 
@@ -41,6 +53,7 @@ export default function SelectStatement() {
             const outputString = outputStates.join('\n');
             setOutputState(outputString);
         } else {
+            notification(false);
             setOutputState('Please Enter The Tables Name or Middle Statement...');
         }
     }
@@ -56,7 +69,7 @@ export default function SelectStatement() {
             </div>
 
             <Button btnText='Submit' onClick={generateSelectStat} />
-
+            <ToastContainer/>
             <OutputBox data={outputState} />
         </div>
     )

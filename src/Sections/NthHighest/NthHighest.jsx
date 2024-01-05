@@ -4,6 +4,8 @@ import TextBox from '../../Components/CustomComp/TextBox/TextBox';
 import InputBox from '../../Components/CustomComp/InputBox/InputBox';
 import Button from '../../Components/CustomComp/Button/Button';
 import OutputBox from '../../Components/CustomComp/OutputBox/OutputBox';
+import {ToastContainer,toast} from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 export default function NthHighest() {
   const [columnName, setColumnName] = useState('');
@@ -22,15 +24,25 @@ export default function NthHighest() {
   const handleNthHighestChange = (value) => {
     setNthHighest(value);
   };
+  const notification=(val)=>{
+    if(val){
+        toast.success("Submitted successfully!",{position:toast.POSITION.TOP_RIGHT,autoClose:1000});
+    }
+    else{
+        toast.warning("Please enter values for all input",{position:toast.POSITION.TOP_CENTER,autoClose:1000});
+    }
+}
 
   const generateSelectStat = () => {
     if (columnName && tableName && nthHighest) {
+      notification(true);
       const result = `select ${columnName} from 
       (select rownum srno, ${columnName} from 
         (select distinct ${columnName} from 
             ${tableName} order by ${columnName} desc))where srno = ${nthHighest};`;
       setOutputState(result);
     } else {
+      notification(false);
       setOutputState('Please enter values for all inputs.');
     }
   };
@@ -42,7 +54,7 @@ export default function NthHighest() {
       <InputBox input_title='Nth Highest' value={nthHighest} onchange={(value) => handleNthHighestChange(value)} error={false} />
 
       <Button btnText='Submit' onClick={generateSelectStat} />
-
+      <ToastContainer/>
       <OutputBox data={outputState} />
     </div>
   );
