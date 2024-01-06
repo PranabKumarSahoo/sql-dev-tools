@@ -75,6 +75,11 @@ That's it!
 
 Your contributions are greatly appreciated. Whether you find and report issues, submit pull requests, or simply provide feedback, you're making a valuable contribution to the community.
 
+## Contributors
+<a href="https://github.com/PranabKumarSahoo/sql-dev-tools/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=PranabKumarSahoo/sql-dev-tools" />
+</a>
+
 ## Contact
 Feel free to reach out to kumarspranab19@gmail.com with any questions or feedback!
 
