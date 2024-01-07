@@ -72,4 +72,3 @@ To maintain clarity and consistency in our commit messages, please follow these 
 - Reference related issues or pull requests at the end of the message.
 
 These guidelines ensure that our commit history remains clear and understandable for everyone involved in the project.
-
