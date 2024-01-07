@@ -2,6 +2,8 @@
 
 Thank you for considering contributing to SQL Dev Tools! We welcome contributions from everyone.
 
+To ensure a smooth and collaborative process, please follow these guidelines:
+
 ## Getting Started
 
 - **Fork the repository** to your GitHub account.
@@ -59,5 +61,15 @@ Contributions aren't limited to code! You can contribute by:
 
 Your contributions, whether big or small, are valuable to us. Thank you for making SQL Dev Tools better for everyone!
 
+## Commit Guidelines
+To maintain clarity and consistency in our commit messages, please follow these guidelines:
 
+- Use imperative mood in the subject line. For example, "Fix issue" instead of "Fixed issue" or "Fixes issue."
+- Limit the subject line to 72 characters.
+- Separate subject from body with a blank line.
+- Capitalize the subject line and each paragraph in the body.
+- Provide a detailed body explaining what changes were made and why if necessary.
+- Reference related issues or pull requests at the end of the message.
+
+These guidelines ensure that our commit history remains clear and understandable for everyone involved in the project.
 
