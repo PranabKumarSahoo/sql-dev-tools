@@ -36,11 +36,13 @@ To ensure a smooth and collaborative process, please follow these guidelines:
 - Open a Pull Request (PR) from your forked repository to the main repository's branch:
   - Provide a clear title and description for your PR, explaining the changes made.
   - Reference any related issues in the PR description.
-  - Please keep updated to the owner, on your progress through images/videos in the comment section before raising the PR.
+  - Please keep updated to the owner, on your progress through images/videos in the issues comment section before raising the PR.
   - Always mention the issue number in your PR in the following format: Resolve issue: #<issue_number>
 
 - Be responsive during the review process:
   - Address feedback or requested changes promptly.
+ 
+PS: For the tasks, please wait until the task is officially assigned to you before starting the work. This process helps in maintaining clarity and provides a structured approach to our tasks.
 
 ## Code Style and Best Practices
 
