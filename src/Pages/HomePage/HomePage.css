@@ -90,12 +90,16 @@
     flex-direction: column;
     align-items: center;
     padding: 20px;
+    width: 100%;
+    height: fit-content;
+    background-color: #141421;
+    gap: 30px;
+    border: 1px solid #2e2e4c;
+
 }
 
-.section-2-title,
-.section-3-title,
-.section-4-title,
-.section-5-title
+
+.section-title
 {
     color: white;
 }
