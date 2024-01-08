@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import './App.css';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Sidebar from './Components/Sidebar/Sidebar';
@@ -8,6 +8,14 @@ import { FiChevronsRight, FiChevronsLeft } from "react-icons/fi";
 function App() {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
   const [buttonIcon, setButtonIcon] = useState(<FiChevronsRight />);
+  const newRef = useRef();
+
+  useEffect(() => {
+    document.addEventListener('mousedown', closeSidebar)
+    return () => {
+      document.removeEventListener("mousedown", closeSidebar);
+    }
+  }, [])
 
   const toggleSidebar = () => {
     setIsSidebarOpen(!isSidebarOpen);
@@ -19,7 +27,7 @@ function App() {
     setButtonIcon(<FiChevronsRight />);
   };
   return (
-    <div className="App">
+    <div className="App" ref={newRef}>
       <BrowserRouter>
         <button className={`toggle-button ${isSidebarOpen ? 'open-btn' : ''}`} onClick={toggleSidebar}>
           {buttonIcon}
