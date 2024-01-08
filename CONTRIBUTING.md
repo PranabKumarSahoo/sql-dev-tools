@@ -48,7 +48,7 @@ To ensure a smooth and collaborative process, please follow these guidelines:
 
 ## Contributor's Code of Conduct
 
-Please adhere to our Code of Conduct while contributing. Respectful and inclusive behavior is expected from everyone involved in the project.
+Please adhere to our [Code of Conduct](CODE_OF_CONDUCT.md) while contributing. Respectful and inclusive behavior is expected from everyone involved in the project.
 
 ## Opening Issues
 
@@ -56,10 +56,6 @@ Contributions aren't limited to code! You can contribute by:
 - Reporting bugs
 - Suggesting improvements
 - Discussing broader ideas in the Issues section
-
-## Thank You!
-
-Your contributions, whether big or small, are valuable to us. Thank you for making SQL Dev Tools better for everyone!
 
 ## Commit Guidelines
 To maintain clarity and consistency in our commit messages, please follow these guidelines:
@@ -72,3 +68,7 @@ To maintain clarity and consistency in our commit messages, please follow these 
 - Reference related issues or pull requests at the end of the message.
 
 These guidelines ensure that our commit history remains clear and understandable for everyone involved in the project.
+
+## Thank You! ⭐
+
+Your contributions, whether big or small, are valuable to us. Thank you for making SQL Dev Tools better for everyone!
