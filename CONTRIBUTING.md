@@ -38,6 +38,7 @@ To ensure a smooth and collaborative process, please follow these guidelines:
   - Reference any related issues in the PR description.
   - Please keep updated to the owner, on your progress through images/videos in the issues comment section before raising the PR.
   - Always mention the issue number in your PR in the following format: Resolve issue: #<issue_number>
+  - And also make sure to test everything before raising the PR.
 
 - Be responsive during the review process:
   - Address feedback or requested changes promptly.
