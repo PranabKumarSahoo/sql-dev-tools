@@ -41,6 +41,7 @@ nav ul {
     transition: background-color 0.3s ease;
     background-color: rgba(0, 0, 0, 0.2);
     border-radius: 5px;
+    color: white;
 }
 
 .nav-link:hover {

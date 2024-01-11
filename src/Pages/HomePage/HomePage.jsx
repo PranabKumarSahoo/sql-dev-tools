@@ -5,6 +5,8 @@ import CountOfRows from "../../Sections/CountOfRows/CountOfRows";
 import SelectStatement from "../../Sections/SelectStatement/SelectStatement";
 import NthHighest from "../../Sections/NthHighest/NthHighest";
 import NthMinimum from "../../Sections/NthMinimum/NthMinimum";
+import {NavLink} from 'react-router-dom'
+import Contact from "../../Components/Contact/Contact";
 
 export default function HomePage() {
   const [showScrollUpButton, setShowScrollUpButton] = useState(false);
@@ -32,7 +34,10 @@ export default function HomePage() {
   };
   return (
     <div className="home-page">
-      <h1 className="home-page-title">SQL Tools for Developers</h1>
+      <h1 className="home-page-title">
+        <span>SQL Tools for Developers</span>
+        <p><NavLink to="/contact" ><button className="button" type="submit">Contact Us</button></NavLink></p>
+      </h1>
       <div id="drop-constraint" className="sections">
         <h2 className="drop-const-title">Drop Constraint</h2>
         <DropConstraintSec />

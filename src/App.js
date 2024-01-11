@@ -3,6 +3,7 @@ import './App.css';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Sidebar from './Components/Sidebar/Sidebar';
 import HomePage from './Pages/HomePage/HomePage';
+import Contact from './Components/Contact/Contact';
 import { FiChevronsRight, FiChevronsLeft } from "react-icons/fi";
 
 function App() {
@@ -35,6 +36,7 @@ function App() {
         <Sidebar isOpen={isSidebarOpen} closeSidebar={closeSidebar} />
         <Routes>
           <Route path='/' element={<HomePage />} />
+          <Route path="/contact" element={<Contact />} />
         </Routes>
       </BrowserRouter>
     </div>

@@ -6,10 +6,12 @@
     justify-content: center;
     background-color: #181828;
 }
-
 .home-page-title {
     padding: 20px;
     color: white;
+    display: flex;
+    flex-direction: row;
+    gap: 70rem;
     text-shadow: 1px 1px 3px red;
 }
 
@@ -90,6 +92,7 @@
     flex-direction: column;
     align-items: center;
     padding: 20px;
+    color: white;
 }
 
 .section-2-title,
@@ -127,5 +130,106 @@
 
     #drop-constraint {
         height: auto;
+    }
+}
+
+
+.button {
+    display: flex;
+    flex-direction: row;
+    color: white;
+    background-color: black;
+    width: 100%;
+    padding: 10px;
+    border-radius: 10px;
+    font-size: medium;
+    margin-right: 0;
+    justify-content: center;
+    font-weight: bold;
+}
+
+@media only screen and (max-width: 1760px) and (min-width: 1650px) {
+    .home-page-title{
+        gap: 60rem;
+    }
+}
+
+@media only screen and (max-width: 1650px) and (min-width: 1550px) {
+    .home-page-title{
+        gap: 50rem;
+    }
+}
+
+
+@media only screen and (max-width: 1550px) and (min-width: 1350px) {
+    .home-page-title{
+        gap: 40rem;
+    }
+}
+
+
+@media only screen and (max-width: 1350px) and (min-width: 1180px) {
+    .home-page-title{
+        gap: 30rem;
+    }
+}
+
+
+@media only screen and (max-width: 1180px) and (min-width: 980px) {
+    .home-page-title{
+        gap: 20rem;
+    }
+}
+
+@media only screen and (max-width: 980px) and (min-width: 780px) {
+    .home-page-title{
+        gap: 10rem;
+    }
+}
+
+@media only screen and (max-width: 780px) {
+    .home-page-title{
+        gap: 5rem;
+    }
+}
+
+@media only screen and (max-width: 700px) {
+    .home-page-title{
+        gap: 3rem;
+    }
+}
+
+@media only screen and (max-width: 650px) {
+    .home-page-title{
+        gap: 1rem;
+    }
+}
+
+@media only screen and (max-width: 520px) {
+    .home-page-title{
+        gap: 0.3rem;
+    }
+    .button {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        font-size: small;
+        padding: 5px;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    span {
+        display: none;
+    }
+
+    .button {
+        width: 100%;
+        font-size: large;
+        padding: 8px;
+        justify-self: center;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
     }
 }
