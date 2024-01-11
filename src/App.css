@@ -2,7 +2,12 @@
   display: flex;
   justify-content: center;
   align-items: flex-start;
+  width: 100vw;
+  height: 100vh;
+  background-color: #181828;
+  color: white;
 }
+
 
 .toggle-button {
   position: fixed;
