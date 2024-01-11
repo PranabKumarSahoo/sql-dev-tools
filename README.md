@@ -71,7 +71,7 @@ If you would like to contribute. Follow these simple steps:
 6. **Pull Request**: Submit a PR, explaining your changes.
 7. Make sure to leave a ⭐ on this repo.
 
-That's it!
+That's it!!
 
 Your contributions are greatly appreciated. Whether you find and report issues, submit pull requests, or simply provide feedback, you're making a valuable contribution to the community.
 
