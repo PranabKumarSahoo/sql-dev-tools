@@ -8,6 +8,16 @@
     border-style: solid;
     border-color: rgba(255, 255, 255, 0.2);
     cursor: pointer;
-    font-size: 15px;
+    font-size: 18px;
     font-weight: bold;
+}
+
+.submit-btn:hover{
+    background-color: grey;
+    border:2px solid rgb(255, 255, 255);
+}
+.submit-btn:active{
+
+    background-color: rgb(247, 247, 247);
+    color:black;
 }
