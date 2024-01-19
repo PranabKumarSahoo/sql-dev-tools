@@ -61,7 +61,7 @@ This will create an optimized build of your project in the dist directory.
 
 ## Contributing
 
-If you would like to contribute. Follow these simple steps:
+If you would like to contribute. Follow these simple steps or you can refer to [Contribution Guidelines](https://github.com/PranabKumarSahoo/sql-dev-tools/blob/main/CONTRIBUTING.md):
 
 1. **Fork the Repository**: Click "Fork" at the top right to create your copy.
 2. **Create a Branch**: Make a new branch for your work.
