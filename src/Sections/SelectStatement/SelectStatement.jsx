@@ -13,7 +13,7 @@ export default function SelectStatement() {
     const [prefixState, setPrefixState] = useState('');
     const [suffixState, setSuffixState] = useState('');
     const [outputState, setOutputState] = useState(null);
-
+    const [showGuide, setShowGuide] = useState(false);
     const handleTextBoxChange = (value) => {
         setWordsInput(value);
     };
@@ -57,7 +57,10 @@ export default function SelectStatement() {
             setOutputState('Please Enter The Tables Name or Middle Statement...');
         }
     }
-
+    const handleGuideButtonClick = () => {
+        setShowGuide(!showGuide);
+        setOutputState(showGuide ? getGuideText() : null); // Clear output if guide is hidden
+      };
     return (
         <div className='select-stat-sec'>
             <TextBox textbox_placehold="Enter middle statements or tables name line by line..." value={wordsInput} onChange={handleTextBoxChange} />
@@ -69,8 +72,41 @@ export default function SelectStatement() {
             </div>
 
             <Button btnText='Submit' onClick={generateSelectStat} />
+            <Button btnText='Guide' onClick={handleGuideButtonClick} />
             <ToastContainer/>
             <OutputBox data={outputState} />
         </div>
     )
 }
+
+const getGuideText = () => {
+    return `
+      Instructions:
+  
+      1. **Enter middle statements or table names (line by line):**
+        - Type each middle statement or table name on a separate line in the large text box.
+        - These will be placed in the middle of the generated SQL statements.
+  
+      2. **Optionally add prefix and suffix statements:**
+        - Use the input boxes below to add optional statements that will be placed before and after each middle statement or table name.
+        - These can be used to add common keywords or clauses to your SQL queries.
+  
+      3. **Click "Submit" to generate the SQL statements:**
+        - The generated SQL statements will be displayed in the output box below, combining the prefix, middle statements/table names, and suffix as specified.
+        - You can then copy and use these statements in your database.
+  
+      Example:
+  
+      If you enter the following:
+  
+      - Prefix: SELECT * FROM 
+      - Middle statements: employees\ncustomers
+      - Suffix: WHERE age > 30
+  
+      The generated SQL statements will be:
+  
+      SELECT * FROM employees WHERE age > 30
+      SELECT * FROM customers WHERE age > 30
+    `;
+  };
+  

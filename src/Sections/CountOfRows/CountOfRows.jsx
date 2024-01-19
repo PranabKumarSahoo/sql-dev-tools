@@ -15,8 +15,8 @@ export default function CountOfRows() {
     const [specificWord, setSpecificWord] = useState('');
     const [outputSql, setOutputSql] = useState(null);
     const [warnMsg, setWarnMsg] = useState('');
-
-
+    const [showGuide, setShowGuide] = useState(false);   
+ 
     const handleTextBoxChange = (value) => {
         setWordsInput(value);
     };
@@ -66,6 +66,10 @@ ORDER BY
             setWarnMsg("Please enter something...");
         }
     };
+    const handleGuideButtonClick = () => {
+        setShowGuide(!showGuide);
+        setOutputSql(showGuide ? getGuideText() : null); // Clear output if guide is hidden
+      };
     return (
         <div className='count-of-rows-sec'>
             <TextBox textbox_placehold="Enter tables name line by line..." value={wordsInput} onChange={handleTextBoxChange} />
@@ -74,9 +78,44 @@ ORDER BY
             <InputBox input_title="Schema Name" value={specificWord} onchange={handleInputBoxChange} error={true} />
 
             <Button btnText='Submit' onClick={generateSql} />
+            <Button btnText='Guide' onClick={handleGuideButtonClick} />
             <ToastContainer/>
 
             <OutputBox data={outputSql} />
         </div>
     )
 }
+
+const getGuideText = () => {
+    return `
+      Instructions:
+  
+      1. **Enter schema name:**
+        - Type the name of the schema you want to query for row counts. This field is required.
+  
+      2. **Optionally enter table names (line by line):**
+        - If you want to filter the results to specific tables, enter their names line by line in the text box. Leave this field empty to include all tables in the schema.
+  
+      3. **Click "Submit" to generate the SQL statement:**
+        - The generated SQL statement will be displayed in the output box below. You can then copy and use it in your database.
+  
+      **Example:**
+  
+      To get the row counts for all tables in the "dbo" schema:
+  
+      - Enter "dbo" in the Schema Name field.
+      - Leave the Tables Name field empty.
+      - Click "Submit".
+  
+      The generated SQL statement will be:
+  
+      SELECT t.name AS table_name, SUM(p.rows) AS row_count
+      FROM sys.tables t
+      INNER JOIN sys.schemas s ON t.schema_id = s.schema_id
+      INNER JOIN sys.partitions p ON t.object_id = p.object_id
+      WHERE s.name = 'dbo'
+      GROUP BY t.name
+      ORDER BY t.name;
+    `;
+  };
+  

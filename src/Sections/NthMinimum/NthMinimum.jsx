@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import './NthMinimum.css';
-import TextBox from '../../Components/CustomComp/TextBox/TextBox';
 import InputBox from '../../Components/CustomComp/InputBox/InputBox';
 import Button from '../../Components/CustomComp/Button/Button';
 import OutputBox from '../../Components/CustomComp/OutputBox/OutputBox';
@@ -10,7 +9,7 @@ export default function NthMinimum() {
   const [tableName, setTableName] = useState('');
   const [nthMinimum, setnthMinimum] = useState('');
   const [outputState, setOutputState] = useState(null);
-
+  const [showGuide, setShowGuide] = useState(false);
   const handleColumnNameChange = (value) => {
     setColumnName(value);
   };
@@ -52,6 +51,10 @@ export default function NthMinimum() {
       setOutputState('Please enter values for all inputs.');
     }
   };
+  const handleGuideButtonClick = () => {
+    setShowGuide(!showGuide);
+    setOutputState(showGuide ? getGuideText() : null); // Clear output if guide is hidden
+  };
 
   return (
     <div className='nth-highest'>
@@ -60,8 +63,22 @@ export default function NthMinimum() {
       <InputBox input_title='Nth Highest' value={nthMinimum} onchange={(value) => handleNthMinimumChange(value)} error={false} />
 
       <Button btnText='Submit' onClick={generateSelectStat} />
-
-      <OutputBox data={outputState} />
+      <Button btnText='Guide' onClick={handleGuideButtonClick} />
+      <OutputBox data={outputState}/>
     </div>
   );
 }
+
+const getGuideText = () => {
+  return `
+    Instructions:
+    1. Enter the name of the column you want to find the Nth minimum value for.
+    2. Enter the name of the table containing the data.
+    3. Enter the value of N (e.g., 3 for the 3rd minimum value).
+    4. Click the "Submit" button to generate the SQL statements for Oracle 10g and MySQL.
+
+    Example:
+    If you want to find the 2nd minimum salary in the "employees" table,
+    enter "salary" for the column name, "employees" for the table name, and "2" for the Nth minimum.
+  `;
+};

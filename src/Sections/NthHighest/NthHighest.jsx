@@ -12,7 +12,7 @@ export default function NthHighest() {
   const [tableName, setTableName] = useState('');
   const [nthHighest, setNthHighest] = useState('');
   const [outputState, setOutputState] = useState(null);
-
+  const [showGuide, setShowGuide] = useState(false);
   const handleColumnNameChange = (value) => {
     setColumnName(value);
   };
@@ -46,7 +46,10 @@ export default function NthHighest() {
       setOutputState('Please enter values for all inputs.');
     }
   };
-
+  const handleGuideButtonClick = () => {
+    setShowGuide(!showGuide);
+    setOutputState(showGuide ? getGuideText() : null); // Clear output if guide is hidden
+  };
   return (
     <div className='nth-highest'>
       <InputBox input_title='Column Name' value={columnName} onchange={(value) => handleColumnNameChange(value)} error={false} />
@@ -54,8 +57,25 @@ export default function NthHighest() {
       <InputBox input_title='Nth Highest' value={nthHighest} onchange={(value) => handleNthHighestChange(value)} error={false} />
 
       <Button btnText='Submit' onClick={generateSelectStat} />
+      <Button btnText='Guide' onClick={handleGuideButtonClick} />
       <ToastContainer/>
       <OutputBox data={outputState} />
     </div>
   );
 }
+
+const getGuideText = () => {
+  return `
+  Instructions:
+
+  1. Enter the name of the column you want to find the Nth highest value for.
+  2. Enter the name of the table containing the data.
+  3. Enter the value of N (e.g., 3 for the 3rd highest value).
+  4. Click the "Submit" button to generate the SQL statement.
+
+  Example:
+
+  If you want to find the 2nd highest salary in the "employees" table,
+  enter "salary" for the column name, "employees" for the table name, and "2" for the Nth highest.
+  `;
+};
