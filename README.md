@@ -68,7 +68,7 @@ If you would like to contribute. Follow these simple steps:
 3. **Make Changes**: Code your feature or bug fix.
 4. **Commit Changes**: Keep it clear and concise.
 5. **Push to Your Fork**: Send changes to your forked repo.
-6. **Pull Request**: Submit a PR, explaining your changes. [PR Template](https://github.com/PranabKumarSahoo/sql-dev-tools/blob/main/pull_request_template.md)
+6. **Pull Request**: Submit a PR, explaining your changes. [PR Guidelines](https://github.com/PranabKumarSahoo/sql-dev-tools/blob/main/pull_request_template.md)
 7. Make sure to leave a ⭐ on this repo.
 
 That's it!!
