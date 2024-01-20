@@ -35,7 +35,9 @@ export default function HomePage() {
   return (
     <div className="home-page">
       <h1 className="home-page-title">
-        <span>SQL Tools for Developers</span>
+        <span style={{
+          color: "white"
+        }}><h3>SQL Tools for Developers</h3></span>
         <p><NavLink to="/contact" ><button className="button" type="submit">Contact Us</button></NavLink></p>
       </h1>
       <div id="drop-constraint" className="sections">

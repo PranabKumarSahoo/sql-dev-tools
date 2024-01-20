@@ -202,18 +202,35 @@
     .home-page-title{
         gap: 1rem;
     }
+
+    .button {
+        width: 100%;
+        font-size: large;
+        padding: 8px;
+        justify-self: center;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    span {
+        display: none;
+    }
 }
 
 @media only screen and (max-width: 520px) {
     .home-page-title{
         gap: 0.3rem;
     }
+   
     .button {
-        display: flex;
-        flex-direction: column;
         width: 100%;
-        font-size: small;
-        padding: 5px;
+        font-size: large;
+        padding: 8px;
+        justify-self: center;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
     }
 }
 
