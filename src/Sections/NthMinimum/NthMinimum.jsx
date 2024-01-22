@@ -1,16 +1,15 @@
 import React, { useState } from 'react';
 import './NthMinimum.css';
-import TextBox from '../../Components/CustomComp/TextBox/TextBox';
 import InputBox from '../../Components/CustomComp/InputBox/InputBox';
 import Button from '../../Components/CustomComp/Button/Button';
 import OutputBox from '../../Components/CustomComp/OutputBox/OutputBox';
-
+import { NthMinimumText } from '../../data/guideTexts';
 export default function NthMinimum() {
   const [columnName, setColumnName] = useState('');
   const [tableName, setTableName] = useState('');
   const [nthMinimum, setnthMinimum] = useState('');
   const [outputState, setOutputState] = useState(null);
-
+  const [showGuide, setShowGuide] = useState(false);
   const handleColumnNameChange = (value) => {
     setColumnName(value);
   };
@@ -52,6 +51,10 @@ export default function NthMinimum() {
       setOutputState('Please enter values for all inputs.');
     }
   };
+  const handleGuideButtonClick = () => {
+    setShowGuide(!showGuide);
+    setOutputState(showGuide ? NthMinimumText : null); // Clear output if guide is hidden
+  };
 
   return (
     <div className='nth-highest'>
@@ -60,8 +63,8 @@ export default function NthMinimum() {
       <InputBox input_title='Nth Highest' value={nthMinimum} onchange={(value) => handleNthMinimumChange(value)} error={false} />
 
       <Button btnText='Submit' onClick={generateSelectStat} />
-
-      <OutputBox data={outputState} />
+      <Button btnText='Guide' onClick={handleGuideButtonClick} />
+      <OutputBox data={outputState}/>
     </div>
   );
 }

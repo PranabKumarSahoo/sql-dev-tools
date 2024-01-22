@@ -6,14 +6,14 @@ import Button from '../../Components/CustomComp/Button/Button';
 import OutputBox from '../../Components/CustomComp/OutputBox/OutputBox';
 import {ToastContainer,toast} from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-
+import { SelectStatementText } from '../../data/guideTexts';
 
 export default function SelectStatement() {
     const [wordsInput, setWordsInput] = useState('');
     const [prefixState, setPrefixState] = useState('');
     const [suffixState, setSuffixState] = useState('');
     const [outputState, setOutputState] = useState(null);
-
+    const [showGuide, setShowGuide] = useState(false);
     const handleTextBoxChange = (value) => {
         setWordsInput(value);
     };
@@ -57,7 +57,10 @@ export default function SelectStatement() {
             setOutputState('Please Enter The Tables Name or Middle Statement...');
         }
     }
-
+    const handleGuideButtonClick = () => {
+        setShowGuide(!showGuide);
+        setOutputState(showGuide ? SelectStatementText : null); // Clear output if guide is hidden
+      };
     return (
         <div className='select-stat-sec'>
             <TextBox textbox_placehold="Enter middle statements or tables name line by line..." value={wordsInput} onChange={handleTextBoxChange} />
@@ -69,6 +72,7 @@ export default function SelectStatement() {
             </div>
 
             <Button btnText='Submit' onClick={generateSelectStat} />
+            <Button btnText='Guide' onClick={handleGuideButtonClick} />
             <ToastContainer/>
             <OutputBox data={outputState} />
         </div>

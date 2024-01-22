@@ -5,12 +5,12 @@ import Button from '../../Components/CustomComp/Button/Button'
 import OutputBox from '../../Components/CustomComp/OutputBox/OutputBox'
 import {ToastContainer,toast} from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-
+import { dropConstraint } from '../../data/guideTexts'
 
 export default function DropConstraintSec() {
     const [textBoxValue, setTextBoxValue] = useState('');
     const [outputData, setOutputData] = useState(null)
-
+    const [showGuide, setShowGuide] = useState(false);
     const handleTextBoxChange = (value) => {
         setTextBoxValue(value);
     };
@@ -52,12 +52,17 @@ export default function DropConstraintSec() {
             setOutputData('Please Enter The Key_Constraint...')
         }
     };
+    const handleGuideButtonClick = () => {
+        setShowGuide(!showGuide);
+        setOutputData(showGuide ? dropConstraint : null); // Clear output if guide is hidden
+      };
     return (
         <div className='drop-const-sec'>
             <TextBox textbox_placehold="Enter table & constraint name line by line as per syntax mentioned below...
             {table_name}: {constraint_name}" value={textBoxValue} onChange={handleTextBoxChange} />
 
             <Button btnText='Submit' onClick={handleButtonClick} />
+            <Button btnText='Guide' onClick={handleGuideButtonClick} />
             <ToastContainer/>
             <OutputBox data={outputData} />
         </div>

@@ -7,7 +7,7 @@ import OutputBox from '../../Components/CustomComp/OutputBox/OutputBox';
 import Warning from '../../Components/CustomComp/Warning/Warning';
 import {ToastContainer,toast} from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-
+import { countOfRows } from '../../data/guideTexts';
 
 
 export default function CountOfRows() {
@@ -15,8 +15,8 @@ export default function CountOfRows() {
     const [specificWord, setSpecificWord] = useState('');
     const [outputSql, setOutputSql] = useState(null);
     const [warnMsg, setWarnMsg] = useState('');
-
-
+    const [showGuide, setShowGuide] = useState(false);   
+ 
     const handleTextBoxChange = (value) => {
         setWordsInput(value);
     };
@@ -66,6 +66,10 @@ ORDER BY
             setWarnMsg("Please enter something...");
         }
     };
+    const handleGuideButtonClick = () => {
+        setShowGuide(!showGuide);
+        setOutputSql(showGuide ? countOfRows : null); // Clear output if guide is hidden
+      };
     return (
         <div className='count-of-rows-sec'>
             <TextBox textbox_placehold="Enter tables name line by line..." value={wordsInput} onChange={handleTextBoxChange} />
@@ -74,9 +78,11 @@ ORDER BY
             <InputBox input_title="Schema Name" value={specificWord} onchange={handleInputBoxChange} error={true} />
 
             <Button btnText='Submit' onClick={generateSql} />
+            <Button btnText='Guide' onClick={handleGuideButtonClick} />
             <ToastContainer/>
 
             <OutputBox data={outputSql} />
         </div>
     )
 }
+
