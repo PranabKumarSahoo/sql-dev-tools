@@ -7,7 +7,7 @@ import OutputBox from '../../Components/CustomComp/OutputBox/OutputBox';
 import Warning from '../../Components/CustomComp/Warning/Warning';
 import {ToastContainer,toast} from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-
+import { countOfRows } from '../../data/guideTexts';
 
 
 export default function CountOfRows() {
@@ -68,7 +68,7 @@ ORDER BY
     };
     const handleGuideButtonClick = () => {
         setShowGuide(!showGuide);
-        setOutputSql(showGuide ? getGuideText() : null); // Clear output if guide is hidden
+        setOutputSql(showGuide ? countOfRows : null); // Clear output if guide is hidden
       };
     return (
         <div className='count-of-rows-sec'>
@@ -86,36 +86,3 @@ ORDER BY
     )
 }
 
-const getGuideText = () => {
-    return `
-      Instructions:
-  
-      1. **Enter schema name:**
-        - Type the name of the schema you want to query for row counts. This field is required.
-  
-      2. **Optionally enter table names (line by line):**
-        - If you want to filter the results to specific tables, enter their names line by line in the text box. Leave this field empty to include all tables in the schema.
-  
-      3. **Click "Submit" to generate the SQL statement:**
-        - The generated SQL statement will be displayed in the output box below. You can then copy and use it in your database.
-  
-      **Example:**
-  
-      To get the row counts for all tables in the "dbo" schema:
-  
-      - Enter "dbo" in the Schema Name field.
-      - Leave the Tables Name field empty.
-      - Click "Submit".
-  
-      The generated SQL statement will be:
-  
-      SELECT t.name AS table_name, SUM(p.rows) AS row_count
-      FROM sys.tables t
-      INNER JOIN sys.schemas s ON t.schema_id = s.schema_id
-      INNER JOIN sys.partitions p ON t.object_id = p.object_id
-      WHERE s.name = 'dbo'
-      GROUP BY t.name
-      ORDER BY t.name;
-    `;
-  };
-  

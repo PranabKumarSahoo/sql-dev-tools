@@ -3,7 +3,7 @@ import './NthMinimum.css';
 import InputBox from '../../Components/CustomComp/InputBox/InputBox';
 import Button from '../../Components/CustomComp/Button/Button';
 import OutputBox from '../../Components/CustomComp/OutputBox/OutputBox';
-
+import { NthMinimumText } from '../../data/guideTexts';
 export default function NthMinimum() {
   const [columnName, setColumnName] = useState('');
   const [tableName, setTableName] = useState('');
@@ -53,7 +53,7 @@ export default function NthMinimum() {
   };
   const handleGuideButtonClick = () => {
     setShowGuide(!showGuide);
-    setOutputState(showGuide ? getGuideText() : null); // Clear output if guide is hidden
+    setOutputState(showGuide ? NthMinimumText : null); // Clear output if guide is hidden
   };
 
   return (
@@ -68,17 +68,3 @@ export default function NthMinimum() {
     </div>
   );
 }
-
-const getGuideText = () => {
-  return `
-    Instructions:
-    1. Enter the name of the column you want to find the Nth minimum value for.
-    2. Enter the name of the table containing the data.
-    3. Enter the value of N (e.g., 3 for the 3rd minimum value).
-    4. Click the "Submit" button to generate the SQL statements for Oracle 10g and MySQL.
-
-    Example:
-    If you want to find the 2nd minimum salary in the "employees" table,
-    enter "salary" for the column name, "employees" for the table name, and "2" for the Nth minimum.
-  `;
-};

@@ -6,6 +6,7 @@ import Button from '../../Components/CustomComp/Button/Button';
 import OutputBox from '../../Components/CustomComp/OutputBox/OutputBox';
 import {ToastContainer,toast} from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { nthHighestText } from '../../data/guideTexts';
 
 export default function NthHighest() {
   const [columnName, setColumnName] = useState('');
@@ -48,7 +49,7 @@ export default function NthHighest() {
   };
   const handleGuideButtonClick = () => {
     setShowGuide(!showGuide);
-    setOutputState(showGuide ? getGuideText() : null); // Clear output if guide is hidden
+    setOutputState(showGuide ? nthHighestText : null); // Clear output if guide is hidden
   };
   return (
     <div className='nth-highest'>
@@ -63,19 +64,3 @@ export default function NthHighest() {
     </div>
   );
 }
-
-const getGuideText = () => {
-  return `
-  Instructions:
-
-  1. Enter the name of the column you want to find the Nth highest value for.
-  2. Enter the name of the table containing the data.
-  3. Enter the value of N (e.g., 3 for the 3rd highest value).
-  4. Click the "Submit" button to generate the SQL statement.
-
-  Example:
-
-  If you want to find the 2nd highest salary in the "employees" table,
-  enter "salary" for the column name, "employees" for the table name, and "2" for the Nth highest.
-  `;
-};

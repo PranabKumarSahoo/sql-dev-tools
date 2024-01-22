@@ -5,7 +5,7 @@ import Button from '../../Components/CustomComp/Button/Button'
 import OutputBox from '../../Components/CustomComp/OutputBox/OutputBox'
 import {ToastContainer,toast} from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-
+import { dropConstraint } from '../../data/guideTexts'
 
 export default function DropConstraintSec() {
     const [textBoxValue, setTextBoxValue] = useState('');
@@ -54,7 +54,7 @@ export default function DropConstraintSec() {
     };
     const handleGuideButtonClick = () => {
         setShowGuide(!showGuide);
-        setOutputData(showGuide ? getGuideText() : null); // Clear output if guide is hidden
+        setOutputData(showGuide ? dropConstraint : null); // Clear output if guide is hidden
       };
     return (
         <div className='drop-const-sec'>
@@ -68,44 +68,3 @@ export default function DropConstraintSec() {
         </div>
     )
 }
-
-
-const getGuideText = () => {
-    return `
-      Instructions:
-  
-      1. **Enter table and constraint names:**
-        - Type the table and constraint names you want to drop, line by line, in the following format:
-          {table_name}: {constraint_name}
-  
-        - For example:
-
-          employees: emp_pk
-          customers: cust_fk
-          
-  
-        - Each line should specify one table and one constraint to drop.
-  
-      2. **Click "Submit" to generate the SQL statements:**
-        - The generated SQL statements will be displayed in the output box below. You can then copy and use them in your database.
-  
-      **Example:**
-  
-      To drop the primary key constraint "emp_pk" from the "employees" table and the foreign key constraint "cust_fk" from the "customers" table:
-  
-      - Enter the following in the text box:
-  
-        
-        employees: emp_pk
-        customers: cust_fk
-  
-      - Click "Submit".
-  
-      The generated SQL statements will be:
-  
-      ALTER TABLE employees DROP CONSTRAINT emp_pk;
-      ALTER TABLE customers DROP CONSTRAINT cust_fk;
-    `;
-  };
-  
-  

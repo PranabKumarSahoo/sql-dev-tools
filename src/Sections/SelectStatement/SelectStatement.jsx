@@ -6,7 +6,7 @@ import Button from '../../Components/CustomComp/Button/Button';
 import OutputBox from '../../Components/CustomComp/OutputBox/OutputBox';
 import {ToastContainer,toast} from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-
+import { SelectStatementText } from '../../data/guideTexts';
 
 export default function SelectStatement() {
     const [wordsInput, setWordsInput] = useState('');
@@ -59,7 +59,7 @@ export default function SelectStatement() {
     }
     const handleGuideButtonClick = () => {
         setShowGuide(!showGuide);
-        setOutputState(showGuide ? getGuideText() : null); // Clear output if guide is hidden
+        setOutputState(showGuide ? SelectStatementText : null); // Clear output if guide is hidden
       };
     return (
         <div className='select-stat-sec'>
@@ -78,35 +78,3 @@ export default function SelectStatement() {
         </div>
     )
 }
-
-const getGuideText = () => {
-    return `
-      Instructions:
-  
-      1. **Enter middle statements or table names (line by line):**
-        - Type each middle statement or table name on a separate line in the large text box.
-        - These will be placed in the middle of the generated SQL statements.
-  
-      2. **Optionally add prefix and suffix statements:**
-        - Use the input boxes below to add optional statements that will be placed before and after each middle statement or table name.
-        - These can be used to add common keywords or clauses to your SQL queries.
-  
-      3. **Click "Submit" to generate the SQL statements:**
-        - The generated SQL statements will be displayed in the output box below, combining the prefix, middle statements/table names, and suffix as specified.
-        - You can then copy and use these statements in your database.
-  
-      Example:
-  
-      If you enter the following:
-  
-      - Prefix: SELECT * FROM 
-      - Middle statements: employees\ncustomers
-      - Suffix: WHERE age > 30
-  
-      The generated SQL statements will be:
-  
-      SELECT * FROM employees WHERE age > 30
-      SELECT * FROM customers WHERE age > 30
-    `;
-  };
-  
