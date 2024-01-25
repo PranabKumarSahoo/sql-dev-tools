@@ -72,7 +72,7 @@ ORDER BY
       };
     return (
         <div className='count-of-rows-sec'>
-            <TextBox textbox_placehold="Enter tables name line by line..." value={wordsInput} onChange={handleTextBoxChange} />
+            <TextBox textbox_placehold="Enter tables name line by line..." value={wordsInput} onChange={handleTextBoxChange}/>
             <Warning warning_msg={warnMsg} warning_type="success" />
 
             <InputBox input_title="Schema Name" value={specificWord} onchange={handleInputBoxChange} error={true} />

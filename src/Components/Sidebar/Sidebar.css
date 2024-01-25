@@ -7,7 +7,10 @@ a {
 .sidebar {
     width: 300px;
     height: 100vh;
-    background: linear-gradient(to bottom, #303154, #2e2e4c);
+    background-image: url(/src/bg-img.jpg);
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
     position: fixed;
     top: 0;
@@ -54,7 +57,6 @@ nav ul {
     gap: 10px;
     padding: 20px;
     margin: 20px;
-    background: linear-gradient(to right, #303154, #2e2e4c);
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
     border-radius: 5px;
 }

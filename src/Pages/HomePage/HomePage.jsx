@@ -32,7 +32,10 @@ export default function HomePage() {
   };
   return (
     <div className="home-page">
-      <h1 className="home-page-title">SQL Tools for Developers</h1>
+      <div className="home">
+        <h1 className="home-page-title">SQL Tools for Developers</h1>
+        <button className="home-page-btn">Scroll down to Explore</button>
+      </div>
       <div id="drop-constraint" className="sections">
         <h2 className="drop-const-title">Drop Constraint</h2>
         <DropConstraintSec />

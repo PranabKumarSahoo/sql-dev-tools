@@ -13,7 +13,7 @@ export default function TextBox({ textbox_placehold, value, onChange }) {
         position: 'absolute',
         right: 0,
         bottom: '1px',
-        color: 'red'
+        color: 'white'
     }
 
     const clearTextBox = () => {

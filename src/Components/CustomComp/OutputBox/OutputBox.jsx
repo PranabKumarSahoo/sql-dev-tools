@@ -9,7 +9,7 @@ export default function OutputBox({ data }) {
     const [copyBtnCss, setCopyBtnCss] = useState({
         position: 'absolute',
         right: 0,
-        color: 'red'
+        color: 'white'
     });
 
     const textareaRef = useRef();
@@ -34,7 +34,7 @@ export default function OutputBox({ data }) {
             setCopyBtnCss({
                 position: 'absolute',
                 right: 0,
-                color: 'red'
+                color: 'green'
             });
             setCopyBtnText('Copy');
         }, 2000);

@@ -22,7 +22,7 @@ export default function InputBox({ input_title, value, onchange, error }) {
     }
 
     const inputStyle = {
-        border: borderError ? '2px solid red' : '1px solid white',
+        border: '1px solid transparent',
     };
 
     const handleClearInput = () => {

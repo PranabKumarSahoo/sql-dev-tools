@@ -4,19 +4,46 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-color: #181828;
+    background-color: #211954a8;
+    background-image: url(/src/bg-img.jpg);
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+}
+.home{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
 }
 
 .home-page-title {
     padding: 20px;
+    margin-top: 100px;
     color: white;
-    text-shadow: 1px 1px 3px red;
+    text-align: center;
+    text-shadow: 5px 5px 10px #241b62;
+    font-size: 80px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.home-page-btn{
+    padding: 25px 100px 25px 100px;
+    margin: 40px;
+    background-color: #241b62;
+    font-size: 20px;
+    font-weight: 650;
+    border: none;
+    border-radius: 20px;
+    box-shadow: 3px 9px 16px rgb(0, 0, 0, 0.4), -3px -3px 10px rgba(255, 255, 255, 0.06), inset 14px 14px 26px rgb(0, 0, 0, 0.3), inset -3px -3px 15px rgba(255, 255, 255, 0.05);
+    cursor: pointer;
+    color: white;
 }
 
 #drop-constraint {
     width: 100%;
     height: fit-content;
-    background-color: #141421;
+    padding: 50px;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -26,12 +53,16 @@
 }
 .drop-const-title {
     color: white;
+    padding: 0 0 30px 0;
+    font-size: 50px;
+    text-shadow: 1px 1px 3px #241b62;
+    text-align: center;
 }
 
 #row-count {
     width: 100%;
     height: fit-content;
-    background-color: #141421;
+    padding: 50px;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -43,7 +74,7 @@
 #select-statement {
     width: 100%;
     height: fit-content;
-    background-color: #141421;
+    padding: 50px;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -54,7 +85,7 @@
 #nth-highest     {
     width: 100%;
     height: fit-content;
-    background-color: #141421;
+    padding: 50px;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -65,7 +96,7 @@
 #nth-minimum     {
     width: 100%;
     height: fit-content;
-    background-color: #141421;
+    padding: 50px;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -76,8 +107,9 @@
 #section-6 {
     width: 100%;
     height: fit-content;
-    background-color: #141421;
+    padding: 50px;
     width: 100%;
+    color: white;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -99,6 +131,10 @@
 .section-5-title
 {
     color: white;
+    font-size: 50px;
+    text-shadow: 2px 2px 5px #241b62;
+    padding: 0 0 30px 0;
+    text-align: center;
 }
 /* Add this style to your HomePage.css or create a new CSS file */
 .scroll-up-button {
@@ -109,7 +145,7 @@
     align-items: center;
     justify-content: center;
     padding: 10px;
-    background-color: #007bff;
+    background-color: #0056b3;
     color: #fff;
     border: none;
     border-radius: 5px;
@@ -118,15 +154,29 @@
   }
   
   .scroll-up-button:hover {
-    background-color: #0056b3;
+    background-color: #9989ec;
   }
-  
+
 @media only screen and (max-width: 600px) {
     .home-page-title {
-        font-size: 22px;
+        font-size: 45px;
     }
-
+    .home-page-btn{
+        padding: 10px 50px 10px 50px;
+        font-size: 17px;
+        border-radius: 15px;
+    }
     #drop-constraint {
         height: auto;
+    }
+    .section-2-title,
+    .section-3-title,
+    .section-4-title,
+    .section-5-title
+    {
+        font-size: 30px;
+    }
+    .drop-const-title {
+        font-size: 30px;
     }
 }
