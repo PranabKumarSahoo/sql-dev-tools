@@ -43,7 +43,9 @@ To ensure a smooth and collaborative process, please follow these guidelines:
 - Be responsive during the review process:
   - Address feedback or requested changes promptly.
  
-PS: For the tasks, please wait until the task is officially assigned to you before starting the work. This process helps in maintaining clarity and provides a structured approach to our tasks.
+Note: 
+- For the tasks, please wait until the task is officially assigned to you before starting the work. This process helps in maintaining clarity and provides a structured approach to our tasks.
+- If you find any issue is taking too much time, please ensure to clone the recent version of the repository before making changes. This is important as others may have added new features that could affect your work.
 
 ## Code Style and Best Practices
 
