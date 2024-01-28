@@ -4,7 +4,9 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Sidebar from './Components/Sidebar/Sidebar';
 import HomePage from './Pages/HomePage/HomePage';
 import { FiChevronsRight, FiChevronsLeft } from "react-icons/fi";
-import Footer from './Sections/Footer/Footer';
+
+
+
 function App() {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
   const [buttonIcon, setButtonIcon] = useState(<FiChevronsRight />);
@@ -39,8 +41,9 @@ function App() {
         <Routes>
           <Route path="/" element={<HomePage />} />
         </Routes>
+        
       </BrowserRouter>
-      <Footer/>
+      
     </div>
   );
 }

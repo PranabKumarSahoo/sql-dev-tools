@@ -5,6 +5,7 @@ import CountOfRows from "../../Sections/CountOfRows/CountOfRows";
 import SelectStatement from "../../Sections/SelectStatement/SelectStatement";
 import NthHighest from "../../Sections/NthHighest/NthHighest";
 import NthMinimum from "../../Sections/NthMinimum/NthMinimum";
+import Footer from "../../Components/Footer/Footer";
 
 export default function HomePage() {
   const [showScrollUpButton, setShowScrollUpButton] = useState(false);
@@ -60,7 +61,11 @@ export default function HomePage() {
         <button className='scroll-up-button' onClick={scrollToTop}>
           Scroll Up
         </button>
-      )}
+
+      )
+      
+      }
+      <Footer/>
     </div>
   );
 }
