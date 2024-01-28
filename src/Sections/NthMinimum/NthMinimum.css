@@ -4,6 +4,8 @@
     align-items: center;
     justify-content: center;
     gap: 30px;
-    background-color: #141421;
+        /*    background-color: #141421;
+*/
+background-color: var(--body_background);
     width: 100%;
 }
