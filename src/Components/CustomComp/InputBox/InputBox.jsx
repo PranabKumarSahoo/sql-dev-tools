@@ -20,9 +20,14 @@ export default function InputBox({ input_title, value, onchange, error }) {
             setBorderError(true);
         }
     }
-
+    /*
+        const inputStyle = {
+            border: borderError ? '2px solid red' : '1px solid white',
+        };
+    */
+   
     const inputStyle = {
-        border: borderError ? '2px solid red' : '1px solid white',
+        border: '2px solid red',
     };
 
     const handleClearInput = () => {

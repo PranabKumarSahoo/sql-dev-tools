@@ -7,7 +7,9 @@
 }
 
 .input-box-title {
-    color: white;
+    /*    color: white;
+*/
+color: var(--text_color);
     font-size: 20px;
 }
 

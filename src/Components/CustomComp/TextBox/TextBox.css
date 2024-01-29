@@ -20,8 +20,10 @@
     font-size: 15px;
     font-weight: bold;
     line-height: 1.5;
-    /* overflow: auto; */
-    background-color: #141421;
+    /* overflow: auto;  
+     background-color: #141421;
+*/
+background-color: var(--body_background);
     color: gray;
     border: 1px solid #2e2e4c;
     box-shadow: 3px 9px 16px rgb(0, 0, 0, 0.4), -3px -3px 10px rgba(255, 255, 255, 0.06), inset 14px 14px 26px rgb(0, 0, 0, 0.3), inset -3px -3px 15px rgba(255, 255, 255, 0.05);
