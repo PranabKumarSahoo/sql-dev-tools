@@ -17,3 +17,17 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+:root{
+  --body_background: white;
+  --text_color: black;
+  --home-page-title-color: rgb(58, 38, 38);
+  --sidebar-background: white;
+  
+}
+[data-theme= "dark"]{
+  --body_background: #141421;
+  --text_color: white;
+  --home-page-title-color: white;
+  --sidebar-background: linear-gradient(to bottom, #303154, #2e2e4c);
+}
