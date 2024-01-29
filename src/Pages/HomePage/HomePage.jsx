@@ -5,6 +5,7 @@ import CountOfRows from "../../Sections/CountOfRows/CountOfRows";
 import SelectStatement from "../../Sections/SelectStatement/SelectStatement";
 import NthHighest from "../../Sections/NthHighest/NthHighest";
 import NthMinimum from "../../Sections/NthMinimum/NthMinimum";
+import Lightmode from "../../Components/Lightmode/Lightmode";
 
 export default function HomePage() {
   const [showScrollUpButton, setShowScrollUpButton] = useState(false);
@@ -33,6 +34,7 @@ export default function HomePage() {
   return (
     <div className="home-page">
       <h1 className="home-page-title">SQL Tools for Developers</h1>
+      <h1 className="home-page-title"><Lightmode/></h1>
       <div id="drop-constraint" className="sections">
         <h2 className="drop-const-title">Drop Constraint</h2>
         <DropConstraintSec />

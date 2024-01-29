@@ -15,7 +15,9 @@
     outline: none;
     padding: 10px;
     font-size: 20px;
-    color: white;
+    /*   color: white;
+  */ 
+  color: var(--text_color);
 }
 
 @media only screen and (max-width: 600px) {
