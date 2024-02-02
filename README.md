@@ -6,7 +6,6 @@ Introducing **SQL Dev Tools!**
 This is a tool for **SQL Developers**, a React-based application empowering SQL developers with versatile functionalities and make their **day-to-life tasks** easy.
 
 ## Features
-
 ### DROP CONSTRAINT
 
 In SQL, the `DROP CONSTRAINT` command plays a crucial role in managing the data integrity and structure of your tables. It allows you to remove existing constraints that are no longer needed or that are causing unwanted limitations. Here's a breakdown of its work and why you might use it.
