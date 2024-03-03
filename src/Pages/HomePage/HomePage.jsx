@@ -5,8 +5,9 @@ import CountOfRows from "../../Sections/CountOfRows/CountOfRows";
 import SelectStatement from "../../Sections/SelectStatement/SelectStatement";
 import NthHighest from "../../Sections/NthHighest/NthHighest";
 import NthMinimum from "../../Sections/NthMinimum/NthMinimum";
+import { FaArrowUp } from "react-icons/fa";
 
-import Footer from "../../Components/Footer/Footer";
+// import Footer from "../../Components/Footer/Footer";
 
 import Lightmode from "../../Components/Lightmode/Lightmode";
 
@@ -38,7 +39,7 @@ export default function HomePage() {
   return (
     <div className="home-page">
       <h1 className="home-page-title">SQL Tools for Developers</h1>
-      <h1 className="home-page-title"><Lightmode/></h1>
+      <h1 className="home-page-title"><Lightmode /></h1>
       <div id="drop-constraint" className="sections">
         <h2 className="drop-const-title">Drop Constraint</h2>
         <DropConstraintSec />
@@ -64,13 +65,9 @@ export default function HomePage() {
       </div>
       {showScrollUpButton && (
         <button className='scroll-up-button' onClick={scrollToTop}>
-          Scroll Up
+          <FaArrowUp />
         </button>
-
-      )
-      
-      }
-      <Footer/>
+      )}
     </div>
   );
 }

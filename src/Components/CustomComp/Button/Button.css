@@ -1,5 +1,5 @@
 .submit-btn {
-    padding: 10px 20px;
+    padding: 12px 25px;
     border-radius: 10px;
     background-color: #181828;
     color: white;
@@ -8,16 +8,17 @@
     border-style: solid;
     border-color: rgba(255, 255, 255, 0.2);
     cursor: pointer;
-    font-size: 18px;
+    font-size: 15px;
     font-weight: bold;
+    transition: all 0.3s ease;
 }
 
-.submit-btn:hover{
+.submit-btn:hover {
     background-color: grey;
-    border:2px solid rgb(255, 255, 255);
+    /* border: 1px solid rgb(255, 255, 255); */
 }
-.submit-btn:active{
 
+.submit-btn:active {
     background-color: rgb(247, 247, 247);
-    color:black;
+    color: black;
 }

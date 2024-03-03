@@ -4,15 +4,15 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-/*    background-color: #181828;    */
-background-color: var(--body_background);
+    /*    background-color: #181828;    */
+    background-color: var(--body_background);
 }
 
 .home-page-title {
     padding: 20px;
     /*   color: white;
-  */ 
-  color: var(--home-page-title-color);
+  */
+    color: var(--home-page-title-color);
     text-shadow: 1px 1px 3px red;
 }
 
@@ -28,10 +28,11 @@ background-color: var(--body_background);
     gap: 30px;
     border: 1px solid #2e2e4c;
 }
+
 .drop-const-title {
     /*   color: white;
-  */ 
-  color: var(--home-page-title-color);
+  */
+    color: var(--home-page-title-color);
 }
 
 #row-count {
@@ -39,7 +40,7 @@ background-color: var(--body_background);
     height: fit-content;
     /*   background-color: #141421;
  */
- background-color: var(--body_background);
+    background-color: var(--body_background);
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -53,7 +54,7 @@ background-color: var(--body_background);
     height: fit-content;
     /*   background-color: #141421;
  */
- background-color: var(--body_background);
+    background-color: var(--body_background);
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -61,12 +62,13 @@ background-color: var(--body_background);
     gap: 30px;
     border: 1px solid #2e2e4c;
 }
-#nth-highest     {
+
+#nth-highest {
     width: 100%;
     height: fit-content;
     /*   background-color: #141421;
  */
- background-color: var(--body_background);
+    background-color: var(--body_background);
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -74,12 +76,13 @@ background-color: var(--body_background);
     gap: 30px;
     border: 1px solid #2e2e4c;
 }
-#nth-minimum     {
+
+#nth-minimum {
     width: 100%;
     height: fit-content;
     /*   background-color: #141421;
  */
- background-color: var(--body_background);
+    background-color: var(--body_background);
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -87,12 +90,13 @@ background-color: var(--body_background);
     gap: 30px;
     border: 1px solid #2e2e4c;
 }
+
 #section-6 {
     width: 100%;
     height: fit-content;
     /*   background-color: #141421;
  */
- background-color: var(--body_background);
+    background-color: var(--body_background);
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -112,12 +116,13 @@ background-color: var(--body_background);
 .section-2-title,
 .section-3-title,
 .section-4-title,
-.section-5-title
-{
+.section-5-title,
+.section-6-title {
     /*   color: white;
-  */ 
-  color: var(--home-page-title-color);
+  */
+    color: var(--home-page-title-color);
 }
+
 /* Add this style to your HomePage.css or create a new CSS file */
 .scroll-up-button {
     position: fixed;
@@ -133,12 +138,12 @@ background-color: var(--body_background);
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s ease;
-  }
-  
-  .scroll-up-button:hover {
+}
+
+.scroll-up-button:hover {
     background-color: #0056b3;
-  }
-  
+}
+
 @media only screen and (max-width: 600px) {
     .home-page-title {
         font-size: 22px;

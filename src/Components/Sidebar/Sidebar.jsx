@@ -4,6 +4,7 @@ import './Sidebar.css'
 
 export default function Sidebar({ isOpen, closeSidebar }) {
     const handleLinkClick = () => {
+        console.log("Link Clicked");
         closeSidebar();
     };
     return (

@@ -38,7 +38,7 @@ nav ul {
     display: block;
     width: 100%;
     padding: 15px;
-    font-size: 18px;
+    font-weight: bold;
     transition: background-color 0.3s ease;
     background-color: rgba(0, 0, 0, 0.2);
     border-radius: 5px;

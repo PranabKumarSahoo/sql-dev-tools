@@ -5,8 +5,6 @@ import Sidebar from './Components/Sidebar/Sidebar';
 import HomePage from './Pages/HomePage/HomePage';
 import { FiChevronsRight, FiChevronsLeft } from "react-icons/fi";
 
-
-
 function App() {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
   const [buttonIcon, setButtonIcon] = useState(<FiChevronsRight />);
@@ -25,11 +23,13 @@ function App() {
   };
 
   const closeSidebar = (event) => {
-    if (newRef.current && !newRef.current.contains(event.target)) {
+    console.log('Close sidebar called');
+    if (newRef.current && event && !newRef.current.contains(event.target)) {
       setIsSidebarOpen(false);
       setButtonIcon(<FiChevronsRight />);
     }
   };
+
 
   return (
     <div className="App" ref={newRef}>
@@ -41,9 +41,7 @@ function App() {
         <Routes>
           <Route path="/" element={<HomePage />} />
         </Routes>
-        
       </BrowserRouter>
-      
     </div>
   );
 }
