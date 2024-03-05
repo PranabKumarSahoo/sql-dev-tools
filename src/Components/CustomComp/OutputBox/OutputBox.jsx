@@ -15,21 +15,18 @@ export default function OutputBox({ data }) {
     const textareaRef = useRef();
 
     const handleCopyClick = () => {
-        // Select the text inside the textarea
         textareaRef.current.select();
-        toast.success("Copied", { position: toast.POSITION.TOP_RIGHT,autoClose:1000 });
+        toast.success("Copied", { position: toast.POSITION.TOP_RIGHT, autoClose: 1000 });
 
-        // Change the style and text of the copy button
         setCopyBtnCss({
             position: 'absolute',
             right: 0,
-            color: 'green', // Change color back to green on successful copy
+            color: 'green',
         });
         setCopyBtnText('✓');
 
         document.execCommand('copy');
 
-        // Reset the style and text after two seconds
         setTimeout(() => {
             setCopyBtnCss({
                 position: 'absolute',

@@ -1,10 +1,9 @@
 import React, { useState } from 'react';
 import './NthHighest.css';
-import TextBox from '../../Components/CustomComp/TextBox/TextBox';
 import InputBox from '../../Components/CustomComp/InputBox/InputBox';
 import Button from '../../Components/CustomComp/Button/Button';
 import OutputBox from '../../Components/CustomComp/OutputBox/OutputBox';
-import {ToastContainer,toast} from 'react-toastify';
+import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { nthHighestText } from '../../data/guideTexts';
 
@@ -25,14 +24,14 @@ export default function NthHighest() {
   const handleNthHighestChange = (value) => {
     setNthHighest(value);
   };
-  const notification=(val)=>{
-    if(val){
-        toast.success("Submitted successfully!",{position:toast.POSITION.TOP_RIGHT,autoClose:1000});
+  const notification = (val) => {
+    if (val) {
+      toast.success("Submitted successfully!", { position: toast.POSITION.TOP_RIGHT, autoClose: 1000 });
     }
-    else{
-        toast.warning("Please enter values for all input",{position:toast.POSITION.TOP_CENTER,autoClose:1000});
+    else {
+      toast.warning("Please enter values for all input", { position: toast.POSITION.TOP_CENTER, autoClose: 1000 });
     }
-}
+  }
 
   const generateSelectStat = () => {
     if (columnName && tableName && nthHighest) {
@@ -49,7 +48,7 @@ export default function NthHighest() {
   };
   const handleGuideButtonClick = () => {
     setShowGuide(!showGuide);
-    setOutputState(showGuide ? nthHighestText : null); // Clear output if guide is hidden
+    setOutputState(showGuide ? nthHighestText : null);
   };
   return (
     <div className='nth-highest'>
@@ -59,7 +58,7 @@ export default function NthHighest() {
 
       <Button btnText='Submit' onClick={generateSelectStat} />
       <Button btnText='Guide' onClick={handleGuideButtonClick} />
-      <ToastContainer/>
+      <ToastContainer />
       <OutputBox data={outputState} />
     </div>
   );

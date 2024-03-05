@@ -24,8 +24,6 @@ export default function NthMinimum() {
 
   const generateSelectStat = () => {
     if (columnName && tableName && nthMinimum) {
-
-      //n_minus_1 for MySQL Syntax
       const n_minus_1 = parseInt(nthMinimum, 10) - 1;
       const result = `
       Using Oracle 10g:
@@ -53,7 +51,7 @@ export default function NthMinimum() {
   };
   const handleGuideButtonClick = () => {
     setShowGuide(!showGuide);
-    setOutputState(showGuide ? NthMinimumText : null); // Clear output if guide is hidden
+    setOutputState(showGuide ? NthMinimumText : null);
   };
 
   return (
@@ -64,7 +62,7 @@ export default function NthMinimum() {
 
       <Button btnText='Submit' onClick={generateSelectStat} />
       <Button btnText='Guide' onClick={handleGuideButtonClick} />
-      <OutputBox data={outputState}/>
+      <OutputBox data={outputState} />
     </div>
   );
 }

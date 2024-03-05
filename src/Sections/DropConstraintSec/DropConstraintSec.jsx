@@ -3,7 +3,7 @@ import './DropConstraintSec.css'
 import TextBox from '../../Components/CustomComp/TextBox/TextBox'
 import Button from '../../Components/CustomComp/Button/Button'
 import OutputBox from '../../Components/CustomComp/OutputBox/OutputBox'
-import {ToastContainer,toast} from 'react-toastify';
+import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { dropConstraint } from '../../data/guideTexts'
 
@@ -15,12 +15,12 @@ export default function DropConstraintSec() {
         setTextBoxValue(value);
     };
 
-    const notification=(val)=>{
-        if(val>0){
-            toast.success("Submitted successfully!",{position:toast.POSITION.TOP_RIGHT,autoClose:1000});
+    const notification = (val) => {
+        if (val > 0) {
+            toast.success("Submitted successfully!", { position: toast.POSITION.TOP_RIGHT, autoClose: 1000 });
         }
-        else{
-            toast.warning("Please enter key constraint",{position:toast.POSITION.TOP_RIGHT,autoClose:1000});
+        else {
+            toast.warning("Please enter key constraint", { position: toast.POSITION.TOP_RIGHT, autoClose: 1000 });
         }
     }
 
@@ -39,13 +39,9 @@ export default function DropConstraintSec() {
                     if (line.includes(":")) {
                         result = result.replace(":", " DROP CONSTRAINT ");
                     }
-
-                    // Add a new line character after each transformed line
                     result += ";\n";
                 }
             }
-
-            // Set the result to the state
             setOutputData(result);
         } else {
             notification(0);
@@ -54,8 +50,8 @@ export default function DropConstraintSec() {
     };
     const handleGuideButtonClick = () => {
         setShowGuide(!showGuide);
-        setOutputData(showGuide ? dropConstraint : null); // Clear output if guide is hidden
-      };
+        setOutputData(showGuide ? dropConstraint : null);
+    };
     return (
         <div className='drop-const-sec'>
             <TextBox textbox_placehold="Enter table & constraint name line by line as per syntax mentioned below...
@@ -63,7 +59,7 @@ export default function DropConstraintSec() {
 
             <Button btnText='Submit' onClick={handleButtonClick} />
             <Button btnText='Guide' onClick={handleGuideButtonClick} />
-            <ToastContainer/>
+            <ToastContainer />
             <OutputBox data={outputData} />
         </div>
     )

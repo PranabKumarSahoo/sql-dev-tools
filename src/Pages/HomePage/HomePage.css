@@ -4,14 +4,11 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    /*    background-color: #181828;    */
     background-color: var(--body_background);
 }
 
 .home-page-title {
     padding: 20px;
-    /*   color: white;
-  */
     color: var(--home-page-title-color);
     text-shadow: 1px 1px 3px red;
 }
@@ -19,7 +16,6 @@
 #drop-constraint {
     width: 100%;
     height: fit-content;
-    /*    background-color: #181828;    */
     background-color: var(--body_background);
     width: 100%;
     display: flex;
@@ -30,16 +26,12 @@
 }
 
 .drop-const-title {
-    /*   color: white;
-  */
     color: var(--home-page-title-color);
 }
 
 #row-count {
     width: 100%;
     height: fit-content;
-    /*   background-color: #141421;
- */
     background-color: var(--body_background);
     width: 100%;
     display: flex;
@@ -52,8 +44,6 @@
 #select-statement {
     width: 100%;
     height: fit-content;
-    /*   background-color: #141421;
- */
     background-color: var(--body_background);
     width: 100%;
     display: flex;
@@ -66,8 +56,6 @@
 #nth-highest {
     width: 100%;
     height: fit-content;
-    /*   background-color: #141421;
- */
     background-color: var(--body_background);
     width: 100%;
     display: flex;
@@ -80,8 +68,6 @@
 #nth-minimum {
     width: 100%;
     height: fit-content;
-    /*   background-color: #141421;
- */
     background-color: var(--body_background);
     width: 100%;
     display: flex;
@@ -94,8 +80,6 @@
 #section-6 {
     width: 100%;
     height: fit-content;
-    /*   background-color: #141421;
- */
     background-color: var(--body_background);
     width: 100%;
     display: flex;
@@ -118,12 +102,9 @@
 .section-4-title,
 .section-5-title,
 .section-6-title {
-    /*   color: white;
-  */
     color: var(--home-page-title-color);
 }
 
-/* Add this style to your HomePage.css or create a new CSS file */
 .scroll-up-button {
     position: fixed;
     bottom: 20px;
@@ -131,17 +112,17 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 10px;
-    background-color: #007bff;
+    padding: 12px;
+    background-color: tomato;
     color: #fff;
     border: none;
-    border-radius: 5px;
+    border-radius: 50px;
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
 
 .scroll-up-button:hover {
-    background-color: #0056b3;
+    background-color: rgba(255, 99, 71, 0.709);
 }
 
 @media only screen and (max-width: 600px) {

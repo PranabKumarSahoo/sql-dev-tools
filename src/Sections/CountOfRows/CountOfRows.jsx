@@ -5,7 +5,7 @@ import TextBox from '../../Components/CustomComp/TextBox/TextBox';
 import Button from '../../Components/CustomComp/Button/Button';
 import OutputBox from '../../Components/CustomComp/OutputBox/OutputBox';
 import Warning from '../../Components/CustomComp/Warning/Warning';
-import {ToastContainer,toast} from 'react-toastify';
+import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { countOfRows } from '../../data/guideTexts';
 
@@ -15,8 +15,8 @@ export default function CountOfRows() {
     const [specificWord, setSpecificWord] = useState('');
     const [outputSql, setOutputSql] = useState(null);
     const [warnMsg, setWarnMsg] = useState('');
-    const [showGuide, setShowGuide] = useState(false);   
- 
+    const [showGuide, setShowGuide] = useState(false);
+
     const handleTextBoxChange = (value) => {
         setWordsInput(value);
     };
@@ -26,12 +26,12 @@ export default function CountOfRows() {
 
     }
 
-    const notification=(val)=>{
-        if(val!==''){
-            toast.success("Submitted successfully!",{position:toast.POSITION.TOP_RIGHT,autoClose:1000});
+    const notification = (val) => {
+        if (val !== '') {
+            toast.success("Submitted successfully!", { position: toast.POSITION.TOP_RIGHT, autoClose: 1000 });
         }
-        else{
-            toast.warning("Please enter the schema name",{position:toast.POSITION.TOP_RIGHT,autoClose:1000});
+        else {
+            toast.warning("Please enter the schema name", { position: toast.POSITION.TOP_RIGHT, autoClose: 1000 });
         }
     }
 
@@ -68,8 +68,8 @@ ORDER BY
     };
     const handleGuideButtonClick = () => {
         setShowGuide(!showGuide);
-        setOutputSql(showGuide ? countOfRows : null); // Clear output if guide is hidden
-      };
+        setOutputSql(showGuide ? countOfRows : null);
+    };
     return (
         <div className='count-of-rows-sec'>
             <TextBox textbox_placehold="Enter tables name line by line..." value={wordsInput} onChange={handleTextBoxChange} />
@@ -79,7 +79,7 @@ ORDER BY
 
             <Button btnText='Submit' onClick={generateSql} />
             <Button btnText='Guide' onClick={handleGuideButtonClick} />
-            <ToastContainer/>
+            <ToastContainer />
 
             <OutputBox data={outputSql} />
         </div>

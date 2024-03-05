@@ -7,9 +7,7 @@
 }
 
 .input-box-title {
-    /*    color: white;
-*/
-color: var(--text_color);
+    color: var(--text_color);
     font-size: 20px;
 }
 
@@ -32,7 +30,7 @@ color: var(--text_color);
     border-radius: 0 4px 4px 0;
     border: none;
     outline: none;
-    
+
 }
 
 .input-box-comp .input-box {

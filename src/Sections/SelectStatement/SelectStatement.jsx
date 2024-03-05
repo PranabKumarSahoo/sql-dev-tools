@@ -4,7 +4,7 @@ import TextBox from '../../Components/CustomComp/TextBox/TextBox'
 import InputBox from '../../Components/CustomComp/InputBox/InputBox';
 import Button from '../../Components/CustomComp/Button/Button';
 import OutputBox from '../../Components/CustomComp/OutputBox/OutputBox';
-import {ToastContainer,toast} from 'react-toastify';
+import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { SelectStatementText } from '../../data/guideTexts';
 
@@ -26,12 +26,12 @@ export default function SelectStatement() {
         }
     }
 
-    const notification=(val)=>{
-        if(val){
-            toast.success("Submitted successfully!",{position:toast.POSITION.TOP_RIGHT,autoClose:1000});
+    const notification = (val) => {
+        if (val) {
+            toast.success("Submitted successfully!", { position: toast.POSITION.TOP_RIGHT, autoClose: 1000 });
         }
-        else{
-            toast.warning("Please Enter The Tables Name or Middle Statement",{position:toast.POSITION.TOP_CENTER,autoClose:1000});
+        else {
+            toast.warning("Please Enter The Tables Name or Middle Statement", { position: toast.POSITION.TOP_CENTER, autoClose: 1000 });
         }
     }
     const generateSelectStat = () => {
@@ -59,8 +59,8 @@ export default function SelectStatement() {
     }
     const handleGuideButtonClick = () => {
         setShowGuide(!showGuide);
-        setOutputState(showGuide ? SelectStatementText : null); // Clear output if guide is hidden
-      };
+        setOutputState(showGuide ? SelectStatementText : null);
+    };
     return (
         <div className='select-stat-sec'>
             <TextBox textbox_placehold="Enter middle statements or tables name line by line..." value={wordsInput} onChange={handleTextBoxChange} />
@@ -73,7 +73,7 @@ export default function SelectStatement() {
 
             <Button btnText='Submit' onClick={generateSelectStat} />
             <Button btnText='Guide' onClick={handleGuideButtonClick} />
-            <ToastContainer/>
+            <ToastContainer />
             <OutputBox data={outputState} />
         </div>
     )
