@@ -28,7 +28,7 @@ You can create a repetitive statement with a middle statement and prefix stateme
 
 ## Demo
 
-[Live Demo](https://sql-dev-tool.web.app/) - Initial Version
+[Live Demo](https://sql-dev-tool.web.app/)
 
 ### Installation
 
